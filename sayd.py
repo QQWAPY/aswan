@@ -37,7 +37,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=cfXzZjFutg6o5alCLvc4po5a; sb=cfXzZii9ujFaY46zWaEUVCUR; m_pixel_ratio=2.75; locale=ar_AR; wd=377x640; c_user=100092426276933; fr=0ANMod87KWhlldn8x.AWWNKbigj4qN-x00Wpp74oVbtno.Bm8_Vx..AAA.0.0.Bm-c4q.AWXaq37JBuE; xs=48%3AehUHy7zd-Vu5KA%3A2%3A1727647274%3A-1%3A6637; vpd=v1%3B640x377x2.75; m_page_voice=100092426276933; wl_cbv=v2%3Bclient_version%3A2635%3Btimestamp%3A1727700681; fbl_st=101326490%3BT%3A28795011'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAAGNO4a7r2wBOyyG8QwpQ84GRpmYHjhXi9cEkZC1cdFzZAEuqPnvkVqPlFygxUJwrl2FILlxton6KYI9wcV220Qd1UiT0ZAZCvvZAvQdZBrCaPRCJOXP0rsAzqYJn913kKrmrwducJr8p09XZBDxmZBvnKyI2PUR1wHFzwNMHQNgnVumhcs7WskXqQ3OYQZDZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=BGf5ZpoM8JvV948wSnYFVxJ3;sb=BGf5Zixl9a8pnPLfOI3tRtnd;locale=ar_AR;vpd=v1%3B768x393x2.3638083934783936;ps_l=1;ps_n=1;m_pixel_ratio=2.3638083934783936;wd=457x893;c_user=100088033094668;fr=0DOFuEgobNGjY3BxB.AWUa8mSUmvVV8YQeF7d6nXcZ-ME.Bm-WcE..AAA.0.0.Bm_GJ0.AWUR32g-Ms4;xs=17%3AInr4Ykc8uO-2Pg%3A2%3A1727816309%3A-1%3A6530;fbl_st=101222121%3BT%3A28796938;wl_cbv=v2%3Bclient_version%3A2635%3Btimestamp%3A1727816314'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
