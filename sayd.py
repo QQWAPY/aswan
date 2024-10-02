@@ -40,7 +40,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/v1.0/'+pil+'?fields=friends.limit(5000)&access_token/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=DUn9Zu4QQqyWOU69Luskz4Ud; sb=DUn9Zhqu3B5uRhNWYYUcCVGR; m_pixel_ratio=2.75; wd=393x766; c_user=100087162447480; fr=0EYHb58T4r0R1LzHX.AWVm_cgi1o5xOZ22-kYlXXg3vg4.Bm_UkN..AAA.0.0.Bm_UkS.AWX8AmhZKpI; xs=42%3ArGFsyQ4P8qBXTA%3A2%3A1727875347%3A-1%3A6637; m_page_voice=100087162447480'}).json()
+		url = requests.get('https://graph.facebook.com/me?fields=id,name&access_token/{}'.format(user),params={'access_token': 'EAABwzLixnjYBO8aDgnZCXTXnwv91swARorjXxPtRfKOrqGejLbbgd6SXDN5RzrysOqQavJjCIrvPZB0FFCMJdZCJHUec6ZA8e7qQhLFodPKlJr9CXwb8MHZCzISXi4od26Ky1HNk6P1CpOBX6vgNY16JZB7CpfcEdoYDRTgmdZCWWWvhLdy53eCoZBuBtQBhUbQw3jgZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=DUn9Zu4QQqyWOU69Luskz4Ud; sb=DUn9Zhqu3B5uRhNWYYUcCVGR; m_pixel_ratio=2.75; wd=393x766; c_user=100087162447480; fr=0EYHb58T4r0R1LzHX.AWVm_cgi1o5xOZ22-kYlXXg3vg4.Bm_UkN..AAA.0.0.Bm_UkS.AWX8AmhZKpI; xs=42%3ArGFsyQ4P8qBXTA%3A2%3A1727875347%3A-1%3A6637; m_page_voice=100087162447480'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
